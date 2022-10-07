@@ -28,7 +28,9 @@ Blockly.JavaScript[blockName] = function(block) {
     const statements = Blockly.JavaScript.statementToCode(block, "token");
     const code = `
 import discord
-
+intents = discord.Intents.all()
+bot = discord.Bot(debug_guilds=[], intents=intents)
+guilds = bot.guilds 
 @bot.event
 async def on_ready():
     ${statements}

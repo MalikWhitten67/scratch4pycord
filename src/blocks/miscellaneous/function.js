@@ -1,23 +1,24 @@
 import Blockly from "blockly/core";
 
-const blockName = "discord_if";
+const blockName = "discord_function";
 
 const blockData = {
-    "message0": "If %1  do%2 ",
+    "message0": "to %1  %2 %3    ",
     "colour": "#ff2b94",
     "args0": [
         {
-            "type": "input_value",
-            "name": "value",
+            "type":"field_input",
+            "name":"name"
         },
+        {
+            "type":"input_dummy"
+         },
         {
             "type": "input_statement",
             "name": "do"
         },
     ],
-    "previousStatement": null,
-    "nextStatement": null,
-    "tooltip": "Create an if statement"
+    "tooltip": "Create A Function"
 };
 Blockly.Blocks[blockName] = {
     init: function() {
@@ -26,10 +27,10 @@ Blockly.Blocks[blockName] = {
 };
 
 Blockly.JavaScript[blockName] = function(block) {
-    const value = Blockly.JavaScript.valueToCode(block, "value", Blockly.JavaScript.ORDER_ATOMIC);
+    var name = block.getFieldValue('name');
     const statements = Blockly.JavaScript.statementToCode(block, "do");
     const code = `
-if ${value} 
-    ${statements}\n`; 
+def ${name}():
+  ${statements}\n`; 
     return code;
 };

@@ -1,6 +1,6 @@
 import Blockly from "blockly/core";
 
-const blockName = "general_lang";
+const blockName = "general_presence";
 
 const blockData = {
     "message0": "%1",
@@ -11,70 +11,18 @@ const blockData = {
             "name": "lang",
             "options": [
               [
-                "English",
-                'en'
+                "Watching",
+                'discord.ActivityType.watching'
               ],
               [
-                "Spanish",
-                'es'
+                "Listening",
+                'discord.ActivityType.listening'
               ],
-              [
-                "Chinese",
-                'zh'
-              ],
-              [
-                "Danish",
-                'da'
-              ],
-              [
-                "Dutch",
-                'nl'
-              ],
-              [
-                "Finnish",
-                'fi'
-              ],
-              [
-                "French",
-                'fr'
-              ],
-              [
-                "German",
-                'de'
-              ],
-              [
-                "Hindi",
-                'hi'
-              ],
-              [
-                "Japanese",
-                'ja'
-              ],
-              [
-                "Korean",
-                'ko'
-              ],
-              [
-                "Portuguese",
-                'pt'
-              ],
-              [
-                "Russian",
-                'ru'
-              ],
-              [
-                "Swedish",
-                'sv'
-              ],
-              [
-                "Vietnamese",
-                'vi'
-              ]
             ],
         }
     ],
-    "output": "Language",
-    "tooltip": "Choose a language."
+    "output": "lang",
+    "tooltip": "Set custom bot status."
 };
 
 Blockly.Blocks[blockName] = {

@@ -30,7 +30,7 @@ Blockly.Blocks[blockName] = {
 Blockly.JavaScript[blockName] = function(block) {
 const statements = Blockly.JavaScript.statementToCode(block, "statements");
 var code = `
-@client.event()
+@bot.event()
 async def on_message(message):
    ${statements.trim()}`
 return code

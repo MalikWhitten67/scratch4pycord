@@ -10,6 +10,8 @@ export default (Blockly) => {
       
       <block type="discord_onready"/>
       <block type="discord_print"/>
+      <block type="general_presence"/>
+      <block type="discord_member"/>
   
           
   </category>
@@ -19,16 +21,24 @@ export default (Blockly) => {
   <block type="discord_greater"/>
 
   </category>
+  <category name="Functions">
+  <block type="discord_function"/>
+  <block type="discord_func"/>
+  </category>
   <category name="Variable" colour="#ffa820">
   <block type="general_variable"></block>
   <block type="general_var"/>
   </category>
- 
+ <category name="Embeds">
+ <block type="general_sendembed"/>
+ <block type="general_field"/>
+ <block type="general_footer"/>
+ </category>
   <category name="Interactions" colour="#D4F2E7">
-
-      <block type="discord_slash"/>
+     
+      <block type="general_slashcommand"/>
       <block type="general_embed"/>
-      <block type="general_sendembed"/>
+      <block type="interaction_reply"/>
           
   </category>
    
@@ -39,12 +49,13 @@ export default (Blockly) => {
 
           
   </category>
+  <category name="Members">
+  <block type="member_mention"/>
+  </category>
   
   <category name="Joins" colour="#238ceb">
 
   <category name="Member Join" colour="#218ceb">
-
-  <block type="general_slashcommand"/>
 
       
 </category>

@@ -76,7 +76,7 @@ export default {
             const htmlContent = Blockly.JavaScript.workspaceToCode(Blockly.getMainWorkspace());
             const blob = new Blob([htmlContent])
             const a = document.createElement("a");
-            a.style = "display: none";
+            a.style = "display: block";
             document.body.appendChild(a);
             const url = window.URL.createObjectURL(blob);
             a.href = url;

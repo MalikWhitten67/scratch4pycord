@@ -56,9 +56,10 @@ Blockly.JavaScript[blockName] = function(block) {
     ${embedname} = discord.Embed(
         title="${title}",
         description="${description}",
-        color=${color},
-        ${statements}
+        color=discord.Colour.${color}(),
+        
     )
+    ${statements}
 
     
     `

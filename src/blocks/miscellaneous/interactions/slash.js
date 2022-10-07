@@ -3,7 +3,7 @@ import Blockly from "blockly/core";
 const blockName = "general_slashcommand";
 
 const blockData = {
-    "message0": "Create a slash command %1  With Description Of  %2 Name of command %3  Command Interation Response %4 ",
+    "message0": "Create a slash command %1  With Description Of  %2 Name of command %3 send %4 ",
     "args0": [
     {
         "type": "input_dummy",
@@ -11,22 +11,18 @@ const blockData = {
     {
         "type": "input_value",
         "name": "TEXT",
-        "text": ""
-    },
-    {
-        "type": "input_value",
-        "name": "commandname",
-        "text": ""
     },
     {
         "type": "input_value",
         "name": "respond",
-        "text": ""
+    },
+    {
+        "type": "input_statement",
+        "name": "statements",
     }
 
     ],
-    "previousStatement": null,
-    "nextStatement": null,
+
     "colour": "#4fa58d",
     "tooltip": "Insert text"
 };
@@ -39,13 +35,12 @@ Blockly.Blocks[blockName] = {
 
 Blockly.JavaScript[blockName] = function(block) {
     const description = Blockly.JavaScript.valueToCode(block, "TEXT", Blockly.JavaScript.ORDER_ATOMIC);
-    const respond = Blockly.JavaScript.valueToCode(block, "respond", Blockly.JavaScript.ORDER_ATOMIC);
-    const commandname = Blockly.JavaScript.valueToCode(block, "commandname", Blockly.JavaScript.ORDER_ATOMIC);
+    const name = Blockly.JavaScript.valueToCode(block, "respond", Blockly.JavaScript.ORDER_ATOMIC);
+    const statements = Blockly.JavaScript.statementToCode(block, "statements");
     const code = `
-    @bot.command(description="${description}")
-    async def on_message(message):
-       if message.content.startswith("${commandname}"):
-            await message.channel.send(${respond})
+@bot.command(description="${description}")
+async def ${name}(ctx):
+     ${statements}
 
     
     `

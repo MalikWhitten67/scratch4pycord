@@ -1,16 +1,15 @@
 import Blockly from "blockly/core";
 
-const blockName = "general_sendembed";
+const blockName = "member_mention";
 
 const blockData = {
-    "message0": "Send Embed %1 ",
+    "message0": "Mention Message Member %1",
     "args0": [{
-        "type": "field_input",
-        "name": "TEXT",
-        "text": ""
-    }],
+        "type": "input_dummy",
+    },
+],
     "output": "String",
-    "colour": "#4fa58d",
+    "colour": "#93c47d",
     "tooltip": "Insert text"
 };
 
@@ -22,6 +21,7 @@ Blockly.Blocks[blockName] = {
 
 Blockly.JavaScript[blockName] = function(block) {
     var text = block.getFieldValue('TEXT');
-    var code = `embed=${text}`;
+    var code = `{member.mention}`;
+    text
     return [code, Blockly.JavaScript.ORDER_ATOMIC];
 };

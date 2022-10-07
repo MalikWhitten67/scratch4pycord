@@ -1,16 +1,16 @@
 import Blockly from "blockly/core";
 
-const blockName = "general_sendembed";
+const blockName = "discord_member";
 
 const blockData = {
-    "message0": "Send Embed %1 ",
+    "message0": "Bot Amount Of Guilds %1",
     "args0": [{
-        "type": "field_input",
-        "name": "TEXT",
-        "text": ""
-    }],
-    "output": "String",
-    "colour": "#4fa58d",
+        "type": "input_dummy",
+    }
+
+],
+    "output": "Presence",
+    "colour": "#93c47d",
     "tooltip": "Insert text"
 };
 
@@ -21,7 +21,8 @@ Blockly.Blocks[blockName] = {
 };
 
 Blockly.JavaScript[blockName] = function(block) {
-    var text = block.getFieldValue('TEXT');
-    var code = `embed=${text}`;
+    var text = block
+    var code = `len(guilds)`;
+    text
     return [code, Blockly.JavaScript.ORDER_ATOMIC];
 };

@@ -1,3 +1,5 @@
 import "./slash"
 import "./embeds"
 import "./sendembed"
+import "./feild"
+import "./footer"
