@@ -21,7 +21,7 @@ export default (Blockly) => {
   <block type="discord_greater"/>
 
   </category>
-  <category name="Functions">
+  <category name="Functions" colour="#990009">
   <block type="discord_function"/>
   <block type="discord_func"/>
   </category>
@@ -29,7 +29,7 @@ export default (Blockly) => {
   <block type="general_variable"></block>
   <block type="general_var"/>
   </category>
- <category name="Embeds">
+ <category name="Embeds" colour"#93c47d">
  <block type="general_sendembed"/>
  <block type="general_field"/>
  <block type="general_footer"/>
