@@ -22,7 +22,7 @@ Blockly.Blocks[blockName] = {
 
 Blockly.JavaScript[blockName] = function(block) {
     var text = block
-    var code = `len(guilds)`;
+    var code = `len(bot.guilds)`;
     text
     return [code, Blockly.JavaScript.ORDER_ATOMIC];
 };

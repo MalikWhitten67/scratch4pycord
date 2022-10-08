@@ -20,6 +20,6 @@ Blockly.Blocks[blockName] = {
 
 Blockly.JavaScript[blockName] = function(block) {
     var text = block.getFieldValue('TEXT');
-    var code = `${text}`;
+    var code = `len(bot.guilds)`;
     return [code, Blockly.JavaScript.ORDER_ATOMIC];
 };

@@ -3,25 +3,16 @@ import Blockly from "blockly/core";
 const blockName = "general_embed";
 
 const blockData = {
-    "message0": "Create an embed %1  with name %2 With Title Of  %3 Description of Embed %4  Set Embed Color %5 Feilds %6 ",
+    "message0": "Make Embed  with name %1 %2 With Color %3 %4 ",
     "args0": [
-    {
-        "type": "input_dummy",
-    },
+   
     {
         "type": "input_value",
         "name": "embedname",
         "text": ""
     },
     {
-        "type": "input_value",
-        "name": "TEXT",
-        "text": ""
-    },
-    {
-        "type": "input_value",
-        "name": "respond",
-        "text": ""
+        "type": "input_dummy",
     },
     {
         "type": "input_value",

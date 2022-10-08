@@ -33,6 +33,6 @@ Blockly.Blocks[blockName] = {
 Blockly.JavaScript[blockName] = function(block) {
     var type =  Blockly.JavaScript.valueToCode(block, "type", Blockly.JavaScript.ORDER_ATOMIC);
     var value2 = Blockly.JavaScript.valueToCode(block, "value2", Blockly.JavaScript.ORDER_ATOMIC);
-    var code = `await bot.change_presence(status=discord.Status.online, activity=${type}(f'${value2}'))\n`;
+    var code = `await bot.change_presence(status=discord.Status.online, activity=${type}(${value2}))\n`;
     return code;
 };

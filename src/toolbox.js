@@ -10,7 +10,9 @@ export default (Blockly) => {
       
       <block type="discord_onready"/>
       <block type="discord_print"/>
+      <block type="discord_presence"/>
       <block type="general_presence"/>
+      
       <block type="discord_member"/>
   
           
@@ -21,7 +23,7 @@ export default (Blockly) => {
   <block type="discord_greater"/>
 
   </category>
-  <category name="Functions" colour="#990009">
+  <category name="Functions">
   <block type="discord_function"/>
   <block type="discord_func"/>
   </category>
@@ -29,15 +31,21 @@ export default (Blockly) => {
   <block type="general_variable"></block>
   <block type="general_var"/>
   </category>
- <category name="Embeds" colour"#93c47d">
+ <category name="Embeds" colour="green">
  <block type="general_sendembed"/>
- <block type="general_field"/>
+ <block type="general_embed"/>
+ <block type="general_field">
+ <value name="true">
+ <block type="general_bool"/>
+ </value>
+ </block>
+ <block type="general_auth"/>
  <block type="general_footer"/>
  </category>
   <category name="Interactions" colour="#D4F2E7">
      
       <block type="general_slashcommand"/>
-      <block type="general_embed"/>
+     
       <block type="interaction_reply"/>
           
   </category>
@@ -51,6 +59,7 @@ export default (Blockly) => {
   </category>
   <category name="Members">
   <block type="member_mention"/>
+  <block type="general_id"/>
   </category>
   
   <category name="Joins" colour="#238ceb">

@@ -3,14 +3,15 @@ import Blockly from "blockly/core";
 const blockName = "general_slashcommand";
 
 const blockData = {
-    "message0": "Create a slash command %1  With Description Of  %2 Name of command %3 send %4 ",
+    "message0": "Create a slash command %1%2  With Description %3%4",
     "args0": [
-    {
-        "type": "input_dummy",
-    },
+
     {
         "type": "input_value",
         "name": "TEXT",
+    },
+    {
+      "type":"input_dummy"
     },
     {
         "type": "input_value",
@@ -23,8 +24,8 @@ const blockData = {
 
     ],
 
-    "colour": "#4fa58d",
-    "tooltip": "Insert text"
+    "colour": "#93c47d",
+    "tooltip": "Create a slash command"
 };
 
 Blockly.Blocks[blockName] = {
