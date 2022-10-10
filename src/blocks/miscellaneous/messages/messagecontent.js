@@ -24,6 +24,6 @@ Blockly.Blocks[blockName] = {
 Blockly.JavaScript[blockName] = function(block) {
     var content = Blockly.JavaScript.valueToCode(block, "TEXT", Blockly.JavaScript.ORDER_ATOMIC);
     
-    var code = `message.content.startswith("${content}"):`; 
+    var code = `message.content.startswith(${content}):`; 
     return [code, Blockly.JavaScript.ORDER_ATOMIC];
 };

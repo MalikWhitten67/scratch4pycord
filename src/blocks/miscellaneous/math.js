@@ -1,15 +1,17 @@
 import Blockly from "blockly/core";
 
-const blockName = "general_guilds";
+const blockName = "general_mathinput";
 
 const blockData = {
-    "message0": "Bot Amount Of Guilds%1",
+    "message0": "%1",
     "args0": [{
-        "type": "input_dummy",
+        "type": "field_input",
+        "name": "TEXT",
+        "text": ""
     }],
     "output": "String",
     "colour": "#93c47d",
-    "tooltip": "Amount of builds bot is in"
+    "tooltip": "Insert Integer"
 };
 
 Blockly.Blocks[blockName] = {
@@ -19,7 +21,7 @@ Blockly.Blocks[blockName] = {
 };
 
 Blockly.JavaScript[blockName] = function(block) {
-    var code = `{len(bot.guilds)}`;
-    block
+    var text = block.getFieldValue('TEXT');
+    var code = `${text}`;
     return [code, Blockly.JavaScript.ORDER_ATOMIC];
 };

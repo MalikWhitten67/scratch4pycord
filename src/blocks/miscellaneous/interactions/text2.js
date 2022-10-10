@@ -1,15 +1,16 @@
 import Blockly from "blockly/core";
 
-const blockName = "general_guilds";
+const blockName = "general_textstringed";
 
 const blockData = {
-    "message0": "Bot Amount Of Guilds%1",
+    "message0": "Stringed %1",
     "args0": [{
-        "type": "input_dummy",
+        "type": "input_value",
+        "name": "name",
     }],
     "output": "String",
     "colour": "#93c47d",
-    "tooltip": "Amount of builds bot is in"
+    "tooltip": "create stringed items"
 };
 
 Blockly.Blocks[blockName] = {
@@ -19,7 +20,7 @@ Blockly.Blocks[blockName] = {
 };
 
 Blockly.JavaScript[blockName] = function(block) {
-    var code = `{len(bot.guilds)}`;
-    block
+    const name = Blockly.JavaScript.valueToCode(block, "name", Blockly.JavaScript.ORDER_ATOMIC);
+    var code = `"${name}"`;
     return [code, Blockly.JavaScript.ORDER_ATOMIC];
 };

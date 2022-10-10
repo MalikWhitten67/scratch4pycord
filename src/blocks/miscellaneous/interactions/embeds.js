@@ -49,7 +49,7 @@ Blockly.JavaScript[blockName] = function(block) {
         description="${description}",
         color=discord.Colour.${color}(),
         
-    )
+    )\n
     ${statements}
 
     

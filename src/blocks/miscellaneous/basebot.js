@@ -23,6 +23,6 @@ Blockly.Blocks[blockName] = {
 
 Blockly.JavaScript[blockName] = function(block) {
     const token = Blockly.JavaScript.valueToCode(block, "token", Blockly.JavaScript.ORDER_ATOMIC);
-    const code = `bot.run("${token}")`; 
+    const code = `bot.run(${token})`; 
     return code;
 };

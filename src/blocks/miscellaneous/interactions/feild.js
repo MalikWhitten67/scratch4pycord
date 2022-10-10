@@ -49,6 +49,6 @@ Blockly.JavaScript[blockName] = function(block) {
     const title = Blockly.JavaScript.valueToCode(block, "title", Blockly.JavaScript.ORDER_ATOMIC);
     const value = Blockly.JavaScript.valueToCode(block, "value", Blockly.JavaScript.ORDER_ATOMIC);
     const inline = Blockly.JavaScript.valueToCode(block, "true", Blockly.JavaScript.ORDER_ATOMIC);
-    const code = `${name}.add_field(name="${title}", value="${value} inline=${inline}")\n`
+    const code = `  ${name}.add_field(name="${title}", value=${value}, inline=${inline})\n`
     return code;
 };

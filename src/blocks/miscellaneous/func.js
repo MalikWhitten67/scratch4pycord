@@ -22,7 +22,8 @@ Blockly.Blocks[blockName] = {
 };
 
 Blockly.JavaScript[blockName] = function(block) {
-    var text = block.getFieldValue('TEXT');
-    const code = `${text}()`; 
+    var text = block.getFieldValue('name');
+    const code = `
+  ${text}()`; 
     return code;
 };

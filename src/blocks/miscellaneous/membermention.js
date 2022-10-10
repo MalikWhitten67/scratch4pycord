@@ -21,7 +21,7 @@ Blockly.Blocks[blockName] = {
 
 Blockly.JavaScript[blockName] = function(block) {
     var text = block.getFieldValue('TEXT');
-    var code = `{member.mention}`;
+    var code = `ctx.author.mention`;
     text
     return [code, Blockly.JavaScript.ORDER_ATOMIC];
 };

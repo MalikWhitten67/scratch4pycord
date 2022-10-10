@@ -1,19 +1,19 @@
 import Blockly from "blockly/core";
 
-const blockName = "general_id";
+const blockName = "author_image";
 
 const blockData = {
-    "message0": "Member%1 ",
+    "message0": "Get Members Avatar%1",
+    "colour": "#999999",
     "args0": [
         {
-            "type":"input_dummy",
-          },
-
+            "type": "input_dummy",
+        },
     ],
     "output":"String",
-    "colour": "#4fa58d",
-    "tooltip": "Get the member"
+    "tooltip": "Get the avatar of user"
 };
+
 
 Blockly.Blocks[blockName] = {
     init: function() {
@@ -22,8 +22,7 @@ Blockly.Blocks[blockName] = {
 };
 
 Blockly.JavaScript[blockName] = function(block) {
-    
-    const code = ` ctx.author.name`
     block
-     return [code, Blockly.JavaScript.ORDER_ATOMIC];
+    const code = `ctx.author.display_avatar`; 
+    return [code, Blockly.JavaScript.ORDER_ATOMIC];
 };

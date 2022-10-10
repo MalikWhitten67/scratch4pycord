@@ -1,14 +1,13 @@
 import Blockly from "blockly/core";
 
-const blockName = "discord_if";
+const blockName = "discord_else";
 
 const blockData = {
-    "message0": "If %1  do%2 ",
+    "message0": "Else%1  do%2 ",
     "colour": "#ff2b94",
     "args0": [
         {
-            "type": "input_value",
-            "name": "value",
+            "type": "input_dummy",
         },
         {
             "type": "input_statement",
@@ -18,7 +17,7 @@ const blockData = {
     ],
     "previousStatement": null,
     "nextStatement": null,
-    "tooltip": "Create an if statement"
+    "tooltip": "Create an else statement"
 };
 Blockly.Blocks[blockName] = {
     init: function() {
@@ -27,10 +26,9 @@ Blockly.Blocks[blockName] = {
 };
 
 Blockly.JavaScript[blockName] = function(block) {
-    const value = Blockly.JavaScript.valueToCode(block, "value", Blockly.JavaScript.ORDER_ATOMIC);
     const statements = Blockly.JavaScript.statementToCode(block, "do");
     const code = `
-if ${value}:
-    ${statements}\n`; 
+else: 
+    ${statements}`; 
     return code;
 };

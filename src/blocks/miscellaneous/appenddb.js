@@ -1,14 +1,13 @@
-
-
-
 import Blockly from "blockly/core";
 
-const blockName = "general_auth";
+const blockName = "discord_pydabaseappend";
 
 const blockData = {
-    "message0": "Set Author of Embed%1 %2 with %3 Add icon url{optional}%4%5",
+    "message0": "Append to Pydabase with name %1%2 add  key%3%4%5 Set key Content%6",
     "args0": [
-     
+        {
+          "type":"input_dummy",
+        },
         {
             "type": "input_value",
             "name": "name"
@@ -16,23 +15,23 @@ const blockData = {
         {
             "type":"input_dummy",
           },
-        {
+          {
             "type": "input_value",
-            "name": "title"
+            "name": "append"
         },
         {
             "type":"input_dummy",
           },
-        {
+          {
             "type": "input_value",
-            "name": "icon"
+            "name": "content"
         },
 
     ],
-    "previousStatement": null,
-    "nextStatement": null,
+    "previousStatement":null,
+    "nextStatement":null,
     "colour": "#4fa58d",
-    "tooltip": "Add author of embed"
+    "tooltip": "Append to pydabase"
 };
 
 Blockly.Blocks[blockName] = {
@@ -43,9 +42,8 @@ Blockly.Blocks[blockName] = {
 
 Blockly.JavaScript[blockName] = function(block) {
     const name = Blockly.JavaScript.valueToCode(block, "name", Blockly.JavaScript.ORDER_ATOMIC);
-    const title = Blockly.JavaScript.valueToCode(block, "title", Blockly.JavaScript.ORDER_ATOMIC);
-    const icon = Blockly.JavaScript.valueToCode(block, "icon", Blockly.JavaScript.ORDER_ATOMIC);
-    const code = `
-  ${name}.set_author(name=${title}, icon_url=${icon})\n`
+    const append = Blockly.JavaScript.valueToCode(block, "append", Blockly.JavaScript.ORDER_ATOMIC);
+    const content = Blockly.JavaScript.valueToCode(block, "content", Blockly.JavaScript.ORDER_ATOMIC);
+    const code = ` ${name}.update({"${append}": "${content}"})\n`
     return code;
 };

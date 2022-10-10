@@ -24,6 +24,7 @@ Blockly.Blocks[blockName] = {
 
 Blockly.JavaScript[blockName] = function(block) {
     const token = Blockly.JavaScript.valueToCode(block, "token", Blockly.JavaScript.ORDER_ATOMIC);
-    const code = `print(f"${token}")`; 
+    const code = `
+    print(${token})`; 
     return code;
 };
