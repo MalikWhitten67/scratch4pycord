@@ -89,7 +89,7 @@ export default {
             console.log("ok")
             const javascriptContent = Blockly.JavaScript.workspaceToCode(Blockly.getMainWorkspace());
             const blob = new Blob([javascriptContent], {
-                type: "text/html"
+                type: "text/python"
             })
             let newWindow = window.open('/')
             const url = window.URL.createObjectURL(blob);
