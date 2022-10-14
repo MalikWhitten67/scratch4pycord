@@ -83,6 +83,8 @@ export default (Blockly) => {
       <block type="general_buttonsend"/>
       <block type="general_buttonint"/>
       </category>
+      <category name="Pages" colour="red">
+      </category>
           
   </category>
    
