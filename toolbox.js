@@ -145,7 +145,6 @@ export default (Blockly) => {
   <block type="general_id"/>
   <block type="author"/>
   <block type="author_image"/>
-  <block type="dm_member"/>
   </category>
   
   <category name="Joins" colour="#238ceb">
