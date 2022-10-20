@@ -55,6 +55,9 @@ export default (Blockly) => {
   </category>
   <category name="Text" colour="#6aa84f">
   <block type="general_textnon"/>
+    <block type="text_join">
+    <mutation items="2"></mutation>
+  </block>
   <block type="general_textstringed"/>
   <block type="general_textf"/>
   <block type="general_textinput"/>
