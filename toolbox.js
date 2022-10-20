@@ -26,6 +26,53 @@ export default (Blockly) => {
   </category>
   <category name="Math" colour="#eeeeee">
   <block type="general_mathinput"/>
+  <block type="math_arithmetic">
+<field name="OP">ADD</field>
+<value name="A">
+<shadow type="math_number">
+<field name="NUM">1</field>
+</shadow>
+</value>
+<value name="B">
+<shadow type="math_number">
+<field name="NUM">1</field>
+</shadow>
+</value>
+</block>
+<block type="math_number_property">
+<mutation divisor_input="false"/>
+<field name="PROPERTY">EVEN</field>
+<value name="NUMBER_TO_CHECK">
+<shadow type="math_number">
+<field name="NUM">0</field>
+</shadow>
+</value>
+</block>
+<block type="math_modulo">
+<value name="DIVIDEND">
+<shadow type="math_number">
+<field name="NUM">64</field>
+</shadow>
+</value>
+<value name="DIVISOR">
+<shadow type="math_number">
+<field name="NUM">10</field>
+</shadow>
+</value>
+</block>
+<block type="math_random_int">
+<value name="FROM">
+<shadow type="math_number">
+<field name="NUM">1</field>
+</shadow>
+</value>
+<value name="TO">
+<shadow type="math_number">
+<field name="NUM">100</field>
+</shadow>
+</value>
+</block>
+<block type="math_random_float"/>
   </category>
   <category name="Logic" colour="#20ff30">
   <block type="discord_isequal"/>
