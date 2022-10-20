@@ -26,53 +26,7 @@ export default (Blockly) => {
   </category>
   <category name="Math" colour="#eeeeee">
   <block type="general_mathinput"/>
-  <block type="math_arithmetic">
-<field name="OP">ADD</field>
-<value name="A">
-<shadow type="math_number">
-<field name="NUM">1</field>
-</shadow>
-</value>
-<value name="B">
-<shadow type="math_number">
-<field name="NUM">1</field>
-</shadow>
-</value>
-</block>
-<block type="math_number_property">
-<mutation divisor_input="false"/>
-<field name="PROPERTY">EVEN</field>
-<value name="NUMBER_TO_CHECK">
-<shadow type="math_number">
-<field name="NUM">0</field>
-</shadow>
-</value>
-</block>
-<block type="math_modulo">
-<value name="DIVIDEND">
-<shadow type="math_number">
-<field name="NUM">64</field>
-</shadow>
-</value>
-<value name="DIVISOR">
-<shadow type="math_number">
-<field name="NUM">10</field>
-</shadow>
-</value>
-</block>
-<block type="math_random_int">
-<value name="FROM">
-<shadow type="math_number">
-<field name="NUM">1</field>
-</shadow>
-</value>
-<value name="TO">
-<shadow type="math_number">
-<field name="NUM">100</field>
-</shadow>
-</value>
-</block>
-<block type="math_random_float"/>
+
   </category>
   <category name="Logic" colour="#20ff30">
   <block type="discord_isequal"/>
@@ -85,7 +39,7 @@ export default (Blockly) => {
   </category>
   <category name="List" colour="#5b5b5b">
   <block type="general_list">
-  <mutation items="0" />
+  <mutation items="2" />
   </block>
   <block type="general_listitem"/>
   </category>
@@ -99,6 +53,7 @@ export default (Blockly) => {
   <category name="Variable" colour="#e74539">
   <block type="general_variable"></block>
   <block type="general_var"/>
+  <block type="changeby"/>
   </category>
   <category name="Text" colour="#6aa84f">
   <block type="general_textnon"/>
@@ -112,7 +67,7 @@ export default (Blockly) => {
  <block type="general_embed"/>
  <block type="general_field">
  <value name="true">
- <block type="general_bool"/>
+ <block type="general_bool"/eneral_button>
  </value>
  </block>
  <block type="discord_embedimage"/>
@@ -128,7 +83,8 @@ export default (Blockly) => {
       <category name="Buttons">
       <block type="general_button"/>
       <block type="general_buttonsend"/>
-      <block type="general_buttonint"/>
+      <block type="general_buttonint">
+      </block>
       </category>
           
   </category>
