@@ -81,8 +81,9 @@ export default {
         save(){
             const zip = new JSZip();
             const xmlContent = Blockly.Xml.domToPrettyText(Blockly.Xml.workspaceToDom(Blockly.getMainWorkspace()));
+            const requirements = "pycord"
             const fileName = `${encodeURIComponent(document.querySelector("#docName").textContent).replace(/%20/g, ' ')}.s4pycord`;
-            zip.file("blocks.xml", xmlContent);
+            zip.file("blocks.xml", xmlContent, "requirements.txt, requirements");
             zip.generateAsync({
                 type: "blob"
             })
